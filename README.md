@@ -20,7 +20,7 @@
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuanRoger&layout=compact&langs_count=10&theme=algolia&border_color=4A69BD)](https://github.com/LuanRoger?tab=repositories)
 
-## :bulb: [Intresting projects](https://github.com/LuanRoger?tab=repositories&q=&type=&language=&sort=stargazers)
+## :bulb: [Interesting projects](https://github.com/LuanRoger?tab=repositories&q=&type=&language=&sort=stargazers)
 <details>
   <summary><code>--packages</code></summary>
   <a href="https://github.com/LuanRoger/SerializedConfiguration"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=SerializedConfiguration&theme=algolia&border_color=4A69BD"><a/>
