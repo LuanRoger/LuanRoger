@@ -18,7 +18,23 @@
 ![Rider](https://img.shields.io/badge/-Rider-000000?style=for-the-badge&logo=Rider&logoWidth=20)
 ![Rider](https://img.shields.io/badge/-InleliJ-000000?style=for-the-badge&logo=IntelliJIDEA&logoWidth=20)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuanRoger&layout=compact&langs_count=8&theme=algolia&border_color=4A69BD)](https://github.com/LuanRoger?tab=repositories)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=LuanRoger&layout=compact&langs_count=10&theme=algolia&border_color=4A69BD)](https://github.com/LuanRoger?tab=repositories)
+
+## :bulb: [Intresting projects](https://github.com/LuanRoger?tab=repositories&q=&type=&language=&sort=stargazers)
+<details>
+  <summary><code>--packages</code></summary>
+  <a href="https://github.com/LuanRoger/SerializedConfiguration"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=SerializedConfiguration&theme=algolia&border_color=4A69BD"><a/>
+    <a href="https://github.com/LuanRoger/GlobalStrings"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=GlobalStrings&theme=algolia&border_color=4A69BD"><a/>
+      <a href="https://github.com/LuanRoger/NetMsixUpdater"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=NetMsixUpdater&theme=algolia&border_color=4A69BD"><a/>
+        <a href="https://github.com/LuanRoger/xinput_gamepad"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=xinput_gamepad&theme=algolia&border_color=4A69BD"><a/>
+</details>
+<details>
+  <summary><code>--softwares</code></summary>
+  <a href="https://github.com/LuanRoger/DataMaster"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=DataMaster&theme=algolia&border_color=4A69BD"><a/>
+    <a href="https://github.com/LuanRoger/ProjectBook"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=ProjectBook&theme=algolia&border_color=4A69BD"><a/>
+      <a href="https://github.com/LuanRoger/Baser"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=Baser&theme=algolia&border_color=4A69BD"><a/>
+        <a href="https://github.com/LuanRoger/WorkOffice"><img src="https://github-readme-stats.vercel.app/api/pin/?username=LuanRoger&repo=WorkOffice&theme=algolia&border_color=4A69BD"><a/>
+</details>
 
 ## :mailbox: Contact me
 [![Gmail](https://img.shields.io/badge/-luan.roger.2003@gmial.com-EA4335?style=for-the-badge&logo=Gmail&logoWidth=20&logoColor=white)](mailto:luan.roger.2003@gmail.com)
