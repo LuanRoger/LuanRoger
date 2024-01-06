@@ -1,0 +1,144 @@
+name: Generate Metrics
+on:
+  schedule: [{cron: "0 0 * * *"}]
+  workflow_dispatch:
+  
+jobs:
+  profile_metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Profile info
+        uses: lowlighter/metrics@latest
+        with:
+          template: terminal
+          filename: profile_info.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: header, repositories, metadata
+          base_indepth: yes
+          
+      - name: Contribuition info
+        uses: lowlighter/metrics@latest
+        with:
+          filename: contribuition_info.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          plugin_languages_ignored: javascript
+          plugin_languages_details: bytes-size, percentage, lines
+          plugin_lines: yes
+          plugin_lines_sections: repositories
+          config_order: languages, lines
+      
+      - name: Work info
+        uses: lowlighter/metrics@latest
+        with:
+          filename: workinfo.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          plugin_wakatime_token: ${{ secrets.WAKA_TIME_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_wakatime: yes
+          plugin_followup: yes
+          plugin_followup_indepth: yes
+          plugin_followup_archived: no
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_order: wakatime, followup, isocalendar
+
+      - name: I Like
+        uses: lowlighter/metrics@latest
+        with:
+          filename: likes.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 3
+          plugin_topics: yes
+          plugin_topics_mode: icons
+          plugin_starlists: yes
+          config_order: stars, starlists, topics
+
+      - name: Social
+        uses: lowlighter/metrics@latest
+        with:
+          filename: social.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_sponsors: yes
+          plugin_sponsors_sections: goal, list
+          plugin_people: yes
+          plugin_notable: yes
+          plugin_notable_types: commit, pull_request
+          plugin_notable_from: all
+          config_order: people, sponsors, notable
+
+  fun_metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Activity
+        uses: lowlighter/metrics@latest
+        with: 
+          filename: activity.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_steam: yes
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: ${{ secrets.STEAM_PROFILE_ID }}
+          plugin_steam_sections: player, recently-played
+          plugin_steam_recent_games_limit: 3
+          plugin_music: yes
+          plugin_music_token: ${{ secrets.SPOTIFY_TOKENS }}
+          plugin_music_provider: spotify
+          plugin_music_mode: recent
+          plugin_music_limit: 3
+          config_order: steam, music
+
+      - name: Fun Facts
+        uses: lowlighter/metrics@latest
+        with:
+          filename: fun_facts.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_limit: 12
+          plugin_gists: yes
+          plugin_habits: yes
+          config_order: achievements, gist, habits
+
+  blog_metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Blog Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: blog_metrics.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_pagespeed: yes
+          plugin_pagespeed_url: https://lrtechblog.vercel.app
+          plugin_pagespeed_screenshot: yes
+          plugin_repositories: yes
+          plugin_repositories_featured: LR-Tech-Blog/blog
+          plugin_repositories_affiliations: organization_member
+          config_order: pagespeed, repositories
+      
+      - name: RSS Feed
+        uses: lowlighter/metrics@latest
+        with:
+          filename: rss_feed.svg
+          token: ${{ secrets.METRIC_TOKEN }}
+          config_timezone: America/Fortaleza
+          base: ""
+          plugin_rss: yes
+          plugin_rss_source: https://lrtechblog.vercel.app/rss.xml
+          plugin_rss_limit: 5
+          config_order: rss

@@ -1,16 +1,13 @@
-### Hi there 👋
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/profile_info.svg" align="left" width="390"/>](#) 
 
-<!--
-**LuanRoger/LuanRoger** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/contribuition_info.svg" align="right" width="390"/>](#)
 
-Here are some ideas to get you started:
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/likeses.svg" align="right" width="390"/>](#)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/workinfo.svg" align="left" width="390"/>](#)
+
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/fun_facts.svg" align="right" width="390"/>](#)
+
+[<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/contribuition_info_2.svg" align="left" width="390"/>](#)
+
+[![An image of @luanroger's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/luanroger)](https://holopin.io/@luanroger)
