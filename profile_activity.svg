@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="328" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="595" class="">
     <defs>
         <style/>
     </defs>
@@ -22,47 +22,61 @@
                                         <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                                     </svg>
                                     <div class="content">
-                                        Pushed 2 commits in
-                                        <span class="repo">Outlev/flutter_core</span>
-                                    </div>
-                                </div>
-                                <div class="details">
-                                    <div>on branch <span class="code">main</span></div>
-                                    <div class="commit">
-                                        <div class="sha">#66f8dd3</div>
-                                        <div class="message">feat: add hooks, `SummaryHeader` and some more utils
-
-- Add conts and validators</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#acf09ee</div>
-                                        <div class="message">feat: add charts with fl_chart</div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Pushed 2 commits in
+                                        Pushed 12 commits in
                                         <span class="repo">Outlev/auto_agro</span>
                                     </div>
                                 </div>
                                 <div class="details">
                                     <div>on branch <span class="code">main</span></div>
                                     <div class="commit">
-                                        <div class="sha">#c90e771</div>
-                                        <div class="message">refactor: ignore `*.freezed.dart`</div>
-                                    </div>
-                                    <div class="commit">
-                                        <div class="sha">#7d90ee5</div>
+                                        <div class="sha">#f09df3a</div>
                                         <div class="message">chore: update flutter_core
 
-Update to 48fa0aa2381549fc5dd67aa20bbfb6c1042040f6</div>
+- Update to db354ea713e0e53af1be776895d40688abb78557</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#5e141c5</div>
+                                        <div class="message">chore(finance): remove dependabot from module package</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#1a94faa</div>
+                                        <div class="message">feat: change flutter_modular by get_it and go_router</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#56971c5</div>
+                                        <div class="message">refactor: read balance and transaction value</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#298dfa3</div>
+                                        <div class="message">fix: readd localization info on app</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#ec4663b</div>
+                                        <div class="message">refactor: create core folder</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#d82a2b0</div>
+                                        <div class="message">refactor(finance): rename some classes, move others and delete some others</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#15271f2</div>
+                                        <div class="message">chore: update flutter_core submodule</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#5e5c13f</div>
+                                        <div class="message">chore: create RADME for packages</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#600895e</div>
+                                        <div class="message">refactor(finance): rename transactions views</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#790de7b</div>
+                                        <div class="message">feat(finance): remove charts and fl_charts</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#baf9af5</div>
+                                        <div class="message">feat(finance): remove hooks and some utils</div>
                                     </div>
                                 </div>
                             </section>
@@ -74,25 +88,11 @@ Update to 48fa0aa2381549fc5dd67aa20bbfb6c1042040f6</div>
                                         <path fill-rule="evenodd" d="M11.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122V6A2.5 2.5 0 0110 8.5H6a1 1 0 00-1 1v1.128a2.251 2.251 0 11-1.5 0V5.372a2.25 2.25 0 111.5 0v1.836A2.492 2.492 0 016 7h4a1 1 0 001-1v-.628A2.25 2.25 0 019.5 3.25zM4.25 12a.75.75 0 100 1.5.75.75 0 000-1.5zM3.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0z"/>
                                     </svg>
                                     <div class="content">
-                                        Created new
+                                        Deleted
                       branch
-                                        <span class="code">main</span>
+                                        <span class="code">dependabot/pub/fl_chart-0.68.0</span>
                                         in
-                                        <span class="repo">Outlev/auto_agro</span>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                        <div class="row fill-width">
-                            <section class="activity">
-                                <div class="field">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                        <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
-                                    </svg>
-                                    <div class="content">
-                                        Created new
-                      repository
-                                        <span class="repo">Outlev/auto_agro</span>
+                                        <span class="repo">Outlev/flutter_core</span>
                                     </div>
                                 </div>
                             </section>
@@ -104,15 +104,89 @@ Update to 48fa0aa2381549fc5dd67aa20bbfb6c1042040f6</div>
                                         <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                                     </svg>
                                     <div class="content">
-                                        Pushed 1 commit in
+                                        Pushed 2 commits in
                                         <span class="repo">Outlev/flutter_core</span>
                                     </div>
                                 </div>
                                 <div class="details">
                                     <div>on branch <span class="code">main</span></div>
                                     <div class="commit">
-                                        <div class="sha">#48fa0aa</div>
-                                        <div class="message">feat: add `SnapshotMensager` and `ConfirmationDialog`</div>
+                                        <div class="sha">#db354ea</div>
+                                        <div class="message">Merge pull request #1 from Outlev/dependabot/pub/fl_chart-0.68.0</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#38c2be9</div>
+                                        <div class="message">build(deps): bump fl_chart from 0.67.0 to 0.68.0
+
+Bumps [fl_chart](https://github.com/imaNNeo/fl_chart) from 0.67.0 to 0.68.0.
+- [Release notes](https://github.com/imaNNeo/fl_chart/releases)
+- [Changelog](https://github.com/imaNNeo/fl_chart/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/imaNNeo/fl_chart/compare/0.67.0...0.68.0)
+
+---
+updated-dependencies:
+- dependency-name: fl_chart
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] &lt;support@github.com&gt;</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Pushed 2 commits in
+                                        <span class="repo">Outlev/flutter_core</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>on branch <span class="code">main</span></div>
+                                    <div class="commit">
+                                        <div class="sha">#9de8fa3</div>
+                                        <div class="message">feat: create `DateFilter` and `Sort` enums</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#5a2f4ed</div>
+                                        <div class="message">feat: `SwapWidget` now has a internal animation controller</div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="row fill-width">
+                            <section class="activity">
+                                <div class="field">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                        <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
+                                    </svg>
+                                    <div class="content">
+                                        Pushed 4 commits in
+                                        <span class="repo">LearningLabUFC/studylab</span>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <div>on branch <span class="code">main</span></div>
+                                    <div class="commit">
+                                        <div class="sha">#6755ba3</div>
+                                        <div class="message">docs: create in code documentation for `GetUsers` on controller and respoistory</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#2a3dcc8</div>
+                                        <div class="message">feat: create validator for pagination information</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#94bee11</div>
+                                        <div class="message">feat: create `GetUsers` endpoint and update auth policy</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#fa571e2</div>
+                                        <div class="message">feat: create `GetUsers` on controller and repository</div>
                                     </div>
                                 </div>
                             </section>
