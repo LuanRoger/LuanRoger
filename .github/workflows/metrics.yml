@@ -87,6 +87,9 @@ jobs:
           config_timezone: America/Fortaleza
           base: ""
           plugin_activity: yes
+          plugin_activity_visibility: public
+          plugin_activity_days: 7
+          plugin_activity_load: 100
           config_order: activity
 
   fun_metrics:
