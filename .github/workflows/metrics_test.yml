@@ -1,0 +1,24 @@
+name: Test Metrics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: RetroAchievements
+        uses: LuanRoger/metrics@cd0e811ca3c1dff68d4e7e7a4d677b335c4e8883
+        with:
+            filename: retroachievements.svg
+            token: ${{ secrets.METRIC_TOKEN }}
+            config_timezone: America/Fortaleza
+            base: ""
+            plugin_retroachievements: yes
+            plugin_retroachievements_token: ${{ secrets.RETROACHIEVEMENTS_TOKEN }}
+            plugin_retroachievements_username: TheROG
+            plugin_retroachievements_target: TheROG
+            plugin_retroachievements_showachievements: yes
+            plugin_retroachievements_lastsin: 7
+            plugin_retroachievements_achievementslimit: 3
