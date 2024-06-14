@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: RetroAchievements
-        uses: LuanRoger/metrics@0684b0b312519536133101106f61923426746e68
+        uses: LuanRoger/metrics@1de8d9f4ad59a0c929b32bc2b23ba8813c742a44
         with:
             filename: retroachievements.svg
             token: ${{ secrets.METRIC_TOKEN }}
