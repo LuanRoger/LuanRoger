@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="245" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="295" class="">
     <defs>
         <style/>
     </defs>
@@ -23,7 +23,7 @@
                                     </svg>
                                     <div class="content">
                                         Starred
-                                        <span class="repo">egoist/tauri-starter</span>
+                                        <span class="repo">jart/cosmopolitan</span>
                                     </div>
                                 </div>
                             </section>
@@ -35,19 +35,31 @@
                                         <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                                     </svg>
                                     <div class="content">
-                                        Pushed 2 commits in
+                                        Pushed 5 commits in
                                         <span class="repo">LuanRoger/yaste</span>
                                     </div>
                                 </div>
                                 <div class="details">
                                     <div>on branch <span class="code">main</span></div>
                                     <div class="commit">
-                                        <div class="sha">#9da8842</div>
-                                        <div class="message">feat: save file content when switch to other file</div>
+                                        <div class="sha">#d6084e0</div>
+                                        <div class="message">feat: implement transalations to `pt-br` and `en`</div>
                                     </div>
                                     <div class="commit">
-                                        <div class="sha">#ff594f4</div>
-                                        <div class="message">fix: block render when update file and content context</div>
+                                        <div class="sha">#ae81793</div>
+                                        <div class="message">feat: add system theme</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#b3e37a4</div>
+                                        <div class="message">feat: create menu for settings</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#dda0094</div>
+                                        <div class="message">feat: add `ToggleTheme` on Menubar</div>
+                                    </div>
+                                    <div class="commit">
+                                        <div class="sha">#447e40f</div>
+                                        <div class="message">feat: remove `Footer`</div>
                                     </div>
                                 </div>
                             </section>
@@ -60,7 +72,7 @@
                                     </svg>
                                     <div class="content">
                                         Starred
-                                        <span class="repo">TheEdoRan/next-safe-action</span>
+                                        <span class="repo">pedroslopez/whatsapp-web.js</span>
                                     </div>
                                 </div>
                             </section>
@@ -73,7 +85,7 @@
                                     </svg>
                                     <div class="content">
                                         Starred
-                                        <span class="repo">goatcorp/FFXIVQuickLauncher</span>
+                                        <span class="repo">hajimehoshi/ebiten</span>
                                     </div>
                                 </div>
                             </section>
@@ -86,7 +98,7 @@
                                     </svg>
                                     <div class="content">
                                         Starred
-                                        <span class="repo">Platane/snk</span>
+                                        <span class="repo">egoist/tauri-starter</span>
                                     </div>
                                 </div>
                             </section>
