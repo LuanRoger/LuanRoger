@@ -59,10 +59,8 @@ jobs:
           base: ""
           plugin_stars: yes
           plugin_stars_limit: 3
-          plugin_topics: yes
-          plugin_topics_mode: icons
           plugin_starlists: yes
-          config_order: stars, starlists, topics
+          config_order: stars, starlists
 
       - name: Social
         uses: lowlighter/metrics@latest
@@ -78,19 +76,6 @@ jobs:
           plugin_notable_types: commit, pull_request
           plugin_notable_from: all
           config_order: people, sponsors, notable
-
-      - name: Profile activity
-        uses: lowlighter/metrics@latest
-        with:
-          filename: profile_activity.svg
-          token: ${{ secrets.METRIC_TOKEN }}
-          config_timezone: America/Fortaleza
-          base: ""
-          plugin_activity: yes
-          plugin_activity_visibility: public
-          plugin_activity_days: 7
-          plugin_activity_load: 100
-          config_order: activity
 
   fun_metrics:
     runs-on: ubuntu-latest
@@ -124,7 +109,7 @@ jobs:
           base: ""
           plugin_achievements: yes
           plugin_achievements_display: compact
-          plugin_achievements_limit: 12
+          plugin_achievements_limit: 18
           plugin_fortune: yes
           config_order: achievements, fortune
 

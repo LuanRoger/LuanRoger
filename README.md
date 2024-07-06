@@ -4,7 +4,6 @@
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/workinfo.svg" align="right" width="400"/>
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/likes.svg" align="left" width="400"/>
 
-<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/profile_activity.svg" align="left" width="400"/>
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/social.svg" align="right" width="400"/>
 
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/activity.svg" align="left" width="400"/>
