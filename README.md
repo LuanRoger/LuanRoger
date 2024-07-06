@@ -4,10 +4,11 @@
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/workinfo.svg" align="right" width="400"/>
 <img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/likes.svg" align="left" width="400"/>
 
-<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/social.svg" align="right" width="400"/>
+<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/social.svg" align="left" width="400"/>
+<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/activity.svg" align="right" width="400"/>
 
-<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/activity.svg" align="left" width="400"/>
-<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/fun_facts.svg" align="right" width="400"/>
+<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/fun_facts.svg" align="left" width="400"/>
+<img src="https://raw.githubusercontent.com/LuanRoger/LuanRoger/main/retroachievements.svg" align="right" width="400"/>
 
 [![An image of @luanroger's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/luanroger)](https://holopin.io/@luanroger)
 
