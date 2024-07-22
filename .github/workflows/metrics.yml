@@ -1,8 +1,8 @@
 name: Generate Metrics
 on:
-  schedule: [{cron: "0 0 * * *"}]
+  schedule: [{ cron: "0 0 * * *" }]
   workflow_dispatch:
-  
+
 jobs:
   profile_metrics:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
           config_timezone: America/Fortaleza
           base: header, repositories, metadata
           base_indepth: yes
-          
+
       - name: Contribuition info
         uses: lowlighter/metrics@latest
         with:
@@ -32,7 +32,7 @@ jobs:
           plugin_lines: yes
           plugin_lines_sections: repositories
           config_order: gist, languages, lines
-      
+
       - name: Work info
         uses: lowlighter/metrics@latest
         with:
@@ -82,7 +82,7 @@ jobs:
     steps:
       - name: Activity
         uses: lowlighter/metrics@latest
-        with: 
+        with:
           filename: activity.svg
           token: ${{ secrets.METRIC_TOKEN }}
           config_timezone: America/Fortaleza
@@ -112,33 +112,3 @@ jobs:
           plugin_achievements_limit: 18
           plugin_fortune: yes
           config_order: achievements, fortune
-
-  blog_metrics:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Blog Metrics
-        uses: lowlighter/metrics@latest
-        with:
-          filename: blog_metrics.svg
-          token: ${{ secrets.METRIC_TOKEN }}
-          config_timezone: America/Fortaleza
-          base: ""
-          plugin_pagespeed: yes
-          plugin_pagespeed_url: https://lrtechblog.vercel.app
-          plugin_pagespeed_screenshot: yes
-          config_order: pagespeed
-      
-      - name: RSS Feed
-        uses: lowlighter/metrics@latest
-        with:
-          filename: rss_feed.svg
-          token: ${{ secrets.METRIC_TOKEN }}
-          config_timezone: America/Fortaleza
-          base: ""
-          plugin_repositories: yes
-          plugin_repositories_featured: LR-Tech-Blog/blog
-          plugin_repositories_affiliations: organization_member
-          plugin_rss: yes
-          plugin_rss_source: https://lrtechblog.vercel.app/rss.xml
-          plugin_rss_limit: 5
-          config_order: repositories, rss
