@@ -153,13 +153,13 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4 8a4 4 0 118 0 4 4 0 01-8 0z"/>
                             </svg>
-                            <span class="diff-handle">LuanRoger/graph_view</span>
+                            <span class="diff-handle">LuanRoger/Text</span>
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M8 5.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM4 8a4 4 0 118 0 4 4 0 01-8 0z"/>
                             </svg>
-                            <span class="diff-handle">LuanRoger/Text</span>
+                            <span class="diff-handle">LuanRoger/virtual_keyboard</span>
                         </div>
                     </section>
                     <section>
@@ -170,8 +170,8 @@
                             <div class="diff-box added"></div>
                             <div class="diff-box deleted"></div>
                             <div class="diff-stats">
-                                <span class="added"> +7.58k</span>
-                                <span class="deleted"> -1.60k</span>
+                                <span class="added"> +1.49k</span>
+                                <span class="deleted">   -326</span>
                             </div>
                             <span> </span>
                         </div>
@@ -182,8 +182,8 @@
                             <div class="diff-box added"></div>
                             <div class="diff-box deleted"></div>
                             <div class="diff-stats">
-                                <span class="added"> +1.49k</span>
-                                <span class="deleted">   -326</span>
+                                <span class="added">   +845</span>
+                                <span class="deleted">    -67</span>
                             </div>
                             <span> </span>
                         </div>
