@@ -7,16 +7,14 @@
     "start": "bun run index.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+    "@types/bun": "latest",
+    "typescript": "catalog:"
   },
   "dependencies": {
-    "@takumi-rs/core": "^0.39.0",
-    "@takumi-rs/helpers": "^0.39.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "@takumi-rs/core": "catalog:",
+    "@takumi-rs/helpers": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "metrics-modules": "workspace:^"
   }
 }

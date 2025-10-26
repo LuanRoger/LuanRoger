@@ -14,13 +14,13 @@
       "default": "./dist/index.js"
     }
   },
-  "peerDependencies": {
-    "typescript": "^5.9.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "dependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:"
   },
   "devDependencies": {
-    "@takumi-rs/helpers": "^0.39.0",
+    "@takumi-rs/helpers": "catalog:",
     "@types/bun": "latest",
     "tsdown": "^0.15.10"
   }

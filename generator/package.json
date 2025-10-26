@@ -1,8 +1,20 @@
 {
   "name": "generator",
   "version": "1.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "scripts": {
+    "dev": "bun run dev --workspace"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "@takumi-rs/helpers": "^0.39.0",
+      "@takumi-rs/core": "^0.39.0",
+      "typescript": "^5.9.3",
+      "react": "^19.2.0",
+      "react-dom": "^19.2.0"
+    }
+  }
 }
