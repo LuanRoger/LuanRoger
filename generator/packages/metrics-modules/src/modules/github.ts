@@ -1,10 +1,16 @@
 import { container, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
-import { debugContainer, h1, h2, p } from "./utils/style";
+import { debugContainer, h2, p } from "../utils/style";
 
 export class GitHubModule extends Module {
-  width = 800;
-  height = 300;
+  constructor() {
+    super({
+      name: "GitHub",
+      description: "A module to show GitHub statistics.",
+      width: 800,
+      height: 300,
+    });
+  }
 
   generate() {
     return container({

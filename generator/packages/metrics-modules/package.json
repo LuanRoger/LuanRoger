@@ -12,9 +12,16 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
+    },
+    "./modules": {
+      "import": "./dist/modules/index.js",
+      "types": "./dist/modules/index.d.ts",
+      "default": "./dist/modules/index.js"
     }
   },
   "dependencies": {
+    "@takumi-rs/helpers": "catalog:",
+    "@takumi-rs/core": "catalog:",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "react": "catalog:",
@@ -22,7 +29,6 @@
     "typescript": "catalog:"
   },
   "devDependencies": {
-    "@takumi-rs/helpers": "catalog:",
     "@types/bun": "latest",
     "tsdown": "^0.15.10"
   }
