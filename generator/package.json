@@ -2,7 +2,8 @@
   "name": "generator",
   "version": "1.0.0",
   "scripts": {
-    "dev": "bun --filter=\"*\" dev"
+    "dev": "bun run --filter=\"*\" dev",
+    "build": "bun run --filter=\"*\" build"
   },
   "workspaces": {
     "packages": [
