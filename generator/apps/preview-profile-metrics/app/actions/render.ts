@@ -1,21 +1,24 @@
 "use server";
 
-import { Renderer } from "@takumi-rs/core";
-import { GitHubModule } from "metrics-modules";
+import { modules } from "@/modules";
+import { RenderResult } from "@/types/render-result";
+import { renderer } from "metrics-modules";
 
-function createRender() {
-  return new Renderer();
-}
+export async function renderModules(): Promise<RenderResult[]> {
+  const bufferPromises = modules.map(async (module) => {
+    const node = module.generate();
 
-export async function renderModules() {
-  const renderer = createRender();
-  const githubModule = new GitHubModule();
-  const node = githubModule.generate();
+    const buffer = await renderer.render(node, {
+      ...module.sizeObject(),
+      format: "webp",
+    });
 
-  const buffer = await renderer.render(node, {
-    ...githubModule.sizeObject(),
-    format: "webp",
+    return {
+      metadata: module.metadata,
+      buffer,
+    };
   });
 
-  return buffer;
+  const results = await Promise.all(bufferPromises);
+  return results;
 }
