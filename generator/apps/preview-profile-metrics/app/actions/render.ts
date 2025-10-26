@@ -1,7 +1,7 @@
 "use server";
 
-import { modulesTemplate } from "@/constants";
 import { Renderer } from "@takumi-rs/core";
+import { GitHubModule } from "metrics-modules";
 
 function createRender() {
   return new Renderer();
@@ -9,11 +9,11 @@ function createRender() {
 
 export async function renderModules() {
   const renderer = createRender();
-  const node = modulesTemplate.githubProfile.generateNode();
+  const githubModule = new GitHubModule();
+  const node = githubModule.generate();
 
   const buffer = await renderer.render(node, {
-    width: 800,
-    height: 600,
+    ...githubModule.sizeObject(),
     format: "webp",
   });
 
