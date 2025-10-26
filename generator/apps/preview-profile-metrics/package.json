@@ -1,0 +1,27 @@
+{
+  "name": "preview-profile-metrics",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bun run next dev",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "metrics-modules": "workspace:^",
+    "next": "16.0.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "@takumi-rs/core": "catalog:",
+    "@takumi-rs/helpers": "catalog:"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.0"
+  }
+}
