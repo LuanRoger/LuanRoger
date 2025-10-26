@@ -14,7 +14,7 @@ export async function renderModules() {
   const buffer = await renderer.render(node, {
     width: 800,
     height: 600,
-    format: "png",
+    format: "webp",
   });
 
   return buffer;
