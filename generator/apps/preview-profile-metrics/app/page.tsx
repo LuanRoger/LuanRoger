@@ -1,17 +1,22 @@
 import { renderModules } from "@/app/actions/render";
-import Image from "next/image";
+import ModuleRenderItem from "@/components/module-render-item";
 
 export default async function Home() {
-  const imagesBuffer = await renderModules();
+  const renderResult = await renderModules();
 
   return (
     <div className="flex flex-col gap-2">
-      <Image
-        width={800}
-        height={600}
-        src={`data:image/png;base64,${imagesBuffer.toString("base64")}`}
-        alt="github profile"
-      />
+      {renderResult.map((result, index) => {
+        const { buffer, metadata } = result;
+
+        return (
+          <ModuleRenderItem
+            key={index}
+            moduleMetadata={metadata}
+            base64Image={buffer.toString("base64")}
+          />
+        );
+      })}
     </div>
   );
 }
