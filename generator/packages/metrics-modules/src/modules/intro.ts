@@ -1,6 +1,7 @@
 import { container, image, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
 import { h1 } from "../utils/style";
+import { getGitHubProfile } from "../services";
 
 export class IntroModule extends Module {
   constructor(debug: boolean = false) {
@@ -15,7 +16,9 @@ export class IntroModule extends Module {
     );
   }
 
-  override content() {
+  override async content() {
+    const githubProfile = await getGitHubProfile();
+
     return [
       container({
         children: [
@@ -30,7 +33,7 @@ export class IntroModule extends Module {
             },
           }),
           container({
-            children: [text("Luan Roger", h1)],
+            children: [text(githubProfile.name, h1)],
           }),
         ],
         style: {

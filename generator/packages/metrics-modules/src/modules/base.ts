@@ -24,15 +24,15 @@ export abstract class Module {
     };
   }
 
-  abstract content(): Node[];
+  abstract content(): Node[] | Promise<Node[]>;
 
-  public generate(): Node {
+  public async generate(): Promise<Node> {
     return container({
       style: {
         ...this.sizeObject(),
         ...(this.debug ? debugContainer : {}),
       },
-      children: this.content(),
+      children: await this.content(),
     });
   }
 }
