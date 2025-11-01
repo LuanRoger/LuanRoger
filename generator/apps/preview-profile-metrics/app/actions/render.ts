@@ -1,10 +1,11 @@
 "use server";
 
-import { modules } from "@/modules";
+import { initModules } from "@/modules";
 import { RenderResult } from "@/types/render-result";
 import { renderer } from "metrics-modules";
 
-export async function renderModules(): Promise<RenderResult[]> {
+export async function renderModules(debug: boolean = false): Promise<RenderResult[]> {
+  const modules = initModules(debug);
   const bufferPromises = modules.map(async (module) => {
     const node = module.generate();
 

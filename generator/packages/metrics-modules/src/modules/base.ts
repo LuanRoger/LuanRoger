@@ -1,4 +1,5 @@
-import type { Node } from "@takumi-rs/helpers";
+import { container, type Node } from "@takumi-rs/helpers";
+import { debugContainer } from "../utils/style";
 
 export interface ModuleMetadata {
   readonly name: string;
@@ -9,9 +10,11 @@ export interface ModuleMetadata {
 
 export abstract class Module {
   public readonly metadata: ModuleMetadata;
+  public readonly debug: boolean = false;
 
-  constructor(metadata: ModuleMetadata) {
+  constructor(metadata: ModuleMetadata, debug: boolean = false) {
     this.metadata = metadata;
+    this.debug = debug;
   }
 
   public sizeObject() {
@@ -21,5 +24,15 @@ export abstract class Module {
     };
   }
 
-  abstract generate(): Node;
+  abstract content(): Node[];
+
+  public generate(): Node {
+    return container({
+      style: {
+        ...this.sizeObject(),
+        ...(this.debug ? debugContainer : {}),
+      },
+      children: this.content(),
+    });
+  }
 }

@@ -21,15 +21,20 @@ export default function ModuleRenderItem({
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{name}</CardTitle>
+        <CardTitle className="flex justify-between">
+          {name}
+          <span className="text-sm text-muted-foreground">
+            {width}x{height}
+          </span>
+        </CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex justify-center">
         <Image
           width={width}
           height={height}
           src={`data:image/png;base64,${base64Image}`}
-          alt="github profile"
+          alt="module preview"
         />
       </CardContent>
     </Card>

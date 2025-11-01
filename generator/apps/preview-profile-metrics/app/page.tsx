@@ -1,8 +1,15 @@
 import { renderModules } from "@/app/actions/render";
 import ModuleRenderItem from "@/components/module-render-item";
 
-export default async function Home() {
-  const renderResult = await renderModules();
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ debug: string }>;
+}) {
+  const { debug } = await searchParams;
+  const isDebug = debug === "true";
+
+  const renderResult = await renderModules(isDebug);
 
   return (
     <div className="flex flex-col gap-2">
