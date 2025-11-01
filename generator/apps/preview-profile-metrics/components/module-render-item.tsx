@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import Image from "next/image";
+import { Badge } from "./ui/badge";
 
 interface ModuleRenderItemProps {
   moduleMetadata: ModuleMetadata;
@@ -23,9 +24,9 @@ export default function ModuleRenderItem({
       <CardHeader>
         <CardTitle className="flex justify-between">
           {name}
-          <span className="text-sm text-muted-foreground">
+          <Badge>
             {width}x{height}
-          </span>
+          </Badge>
         </CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
