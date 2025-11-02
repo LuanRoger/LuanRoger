@@ -1,0 +1,23 @@
+name: Generate Images
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-images:
+    name: Generate Images
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+        working-directory: "./generator"
+      - run: bun run build --output ../../../
+        working-directory: "./generator"
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore: regenerate images"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          branch: "profile-v2"

@@ -1,0 +1,36 @@
+{
+  "name": "metrics-modules",
+  "version": "0.0.0",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsdown --watch ./src",
+    "build": "tsc && tsdown"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./modules": {
+      "import": "./dist/modules/index.js",
+      "types": "./dist/modules/index.d.ts",
+      "default": "./dist/modules/index.js"
+    }
+  },
+  "dependencies": {
+    "@takumi-rs/core": "catalog:",
+    "@takumi-rs/helpers": "catalog:",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "ky": "^1.13.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsdown": "^0.15.10"
+  }
+}
