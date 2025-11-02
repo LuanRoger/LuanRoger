@@ -1,19 +1,27 @@
-import { Renderer } from "@takumi-rs/core";
-import { GitHub } from "metrics-modules";
+import { renderer } from "metrics-modules";
+import { modules } from "./modules";
+import { createFilePath, writeImageToFile } from "./utils/file";
 
-const renderer = new Renderer({});
+export async function render(basePath?: string) {
+  const outputBasePath = basePath || "./";
 
-async function writeImageToFile(buffer: Uint8Array, filename: string) {
-  await Bun.write(filename, buffer);
-}
+  const promises = modules.map(async (module) => {
+    const { module: moduleInstance, fileExtension, fileName } = module;
 
-export async function render() {
-  const githubNode = GitHub.generateGitHubProfile();
+    const node = await moduleInstance.generate();
+    const buffer = await renderer.render(node, {
+      width: moduleInstance.width,
+      height: moduleInstance.height,
+      format: "png",
+    });
+    const fullFileName = createFilePath(
+      outputBasePath,
+      fileName,
+      fileExtension
+    );
 
-  const imageBuffer = await renderer.render(githubNode, {
-    width: 1000,
-    height: 800,
-    format: "png",
+    await writeImageToFile(buffer, fullFileName);
   });
-  await writeImageToFile(imageBuffer, "github-profile.png");
+
+  await Promise.all(promises);
 }
