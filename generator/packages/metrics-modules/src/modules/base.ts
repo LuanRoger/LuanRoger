@@ -23,6 +23,14 @@ export abstract class Module {
       height: this.metadata.height,
     };
   }
+  
+  public get width() {
+    return this.metadata.width;
+  }
+
+  public get height() {
+    return this.metadata.height;
+  }
 
   abstract content(): Node[] | Promise<Node[]>;
 
