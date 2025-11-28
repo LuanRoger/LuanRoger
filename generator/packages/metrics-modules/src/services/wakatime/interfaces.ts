@@ -31,3 +31,8 @@ export interface WakatimeStats {
   editors: WakatimeEditor[];
   languages: WakatimeLanguages[];
 }
+
+export interface WakatimeAllTimeMetrics {
+  totalSeconds: number;
+  text: string;
+}

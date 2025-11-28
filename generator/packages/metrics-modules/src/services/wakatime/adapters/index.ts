@@ -1,4 +1,5 @@
 import type {
+  WakatimeAllTimeMetrics,
   WakatimeEditor,
   WakatimeLanguageMetadata,
   WakatimeStats,
@@ -45,5 +46,20 @@ export function adaptWakatimeResponseToWakatimeStats(
     totalInSeconds: data.total_seconds,
     editors,
     languages,
+  };
+}
+
+export function adaptWakatimeAllTimeResponseToWakatimeAllTime(
+  model: any,
+): WakatimeAllTimeMetrics {
+  if (!model || typeof model !== "object") {
+    throw new Error("Invalid model: expected an object");
+  }
+
+  const data = model.data;
+
+  return {
+    totalSeconds: data.total_seconds,
+    text: data.text,
   };
 }
