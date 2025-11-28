@@ -2,16 +2,16 @@ import { container, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
 import { h2, p } from "../utils/style";
 
-export class GitHubModule extends Module {
+export class DumyModule extends Module {
   constructor(debug: boolean = false) {
     super(
       {
-        name: "GitHub",
-        description: "A module to show GitHub statistics.",
+        name: "Dumy",
+        description: "A module to show dumy content.",
         width: 800,
         height: 300,
       },
-      debug
+      debug,
     );
   }
 
