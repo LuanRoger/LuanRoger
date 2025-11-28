@@ -1,5 +1,5 @@
 import { container, type Node } from "@takumi-rs/helpers";
-import { debugContainer } from "../utils/style";
+import { debugContainer } from "@/styles";
 
 export interface ModuleMetadata {
   readonly name: string;
@@ -23,7 +23,7 @@ export abstract class Module {
       height: this.metadata.height,
     };
   }
-  
+
   public get width() {
     return this.metadata.width;
   }

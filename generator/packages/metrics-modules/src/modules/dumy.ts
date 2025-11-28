@@ -1,6 +1,6 @@
 import { container, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
-import { h2, p } from "../utils/style";
+import { h2, p } from "@/styles";
 
 export class DumyModule extends Module {
   constructor(debug: boolean = false) {
