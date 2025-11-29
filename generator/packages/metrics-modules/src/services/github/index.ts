@@ -11,9 +11,7 @@ const githubApiClient = ky.create({
 export async function getGitHubProfile() {
   const githubPat = process.env.GH_METRIC_PAT;
   if (!githubPat) {
-    throw new Error(
-      "GITHUB_METRIC_PAT is not defined in environment variables",
-    );
+    throw new Error("GH_METRIC_PAT is not defined in environment variables");
   }
 
   const response = await githubApiClient
