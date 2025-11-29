@@ -3,3 +3,7 @@ export * from "./calendar";
 export * from "./code";
 export * from "./repository";
 export * from "./star";
+export * from "./wakatime";
+export * from "./history";
+export * from "./terminal";
+export * from "./pulse";

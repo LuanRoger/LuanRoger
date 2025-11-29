@@ -1,3 +1,4 @@
-export * from "./github";
+export * from "./dumy";
 export * from "./intro";
 export * from "./base";
+export * from "./wakatime";

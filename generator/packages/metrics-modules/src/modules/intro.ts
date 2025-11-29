@@ -1,8 +1,9 @@
 import { container, image, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
-import { h1, p } from "../utils/style";
+import { h1, p } from "@/styles";
 import { getGitHubProfile, getGitHubRepos } from "../services";
 import { usersIcon, repositoryIcon, codeIcon, starIcon } from "../icons";
+import IconLabel from "../contents/icon-label";
 
 export class IntroModule extends Module {
   constructor(debug: boolean = false) {
@@ -13,7 +14,7 @@ export class IntroModule extends Module {
         width: 800,
         height: 300,
       },
-      debug
+      debug,
     );
   }
 
@@ -31,7 +32,7 @@ export class IntroModule extends Module {
       new Date().getFullYear() - new Date(created_at).getFullYear();
     const stargazersCount = repositories.reduce(
       (acc, repo) => acc + repo.stargazers_count,
-      0
+      0,
     );
 
     return [
@@ -55,7 +56,7 @@ export class IntroModule extends Module {
                   text(`@${login}`, p),
                   text(
                     `Created at ${formatedDate} (${yearsSinceCreation} years ago)`,
-                    p
+                    p,
                   ),
                 ],
                 style: {
@@ -72,51 +73,13 @@ export class IntroModule extends Module {
           }),
           container({
             children: [
-              container({
-                children: [
-                  await repositoryIcon(),
-                  text(`${public_repos} Repositories`, p),
-                ],
-                style: {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: 5,
-                },
-              }),
-              container({
-                children: [
-                  await usersIcon(),
-                  text(`${followers} Followers`, p),
-                ],
-                style: {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: 5,
-                },
-              }),
-              container({
-                children: [await codeIcon(), text(`${public_gists} Gists`, p)],
-                style: {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: 5,
-                },
-              }),
-              container({
-                children: [
-                  await starIcon(),
-                  text(`${stargazersCount} Stars`, p),
-                ],
-                style: {
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  gap: 5,
-                },
-              }),
+              IconLabel(
+                await repositoryIcon(),
+                text(`${public_repos} Repositories`, p),
+              ),
+              IconLabel(await codeIcon(), text(`${public_gists} Gists`, p)),
+              IconLabel(await usersIcon(), text(`${followers} Followers`, p)),
+              IconLabel(await starIcon(), text(`${stargazersCount} Stars`, p)),
             ],
             style: {
               display: "grid",
