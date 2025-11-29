@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bun run index.ts"
+    "generate": "bun run index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",

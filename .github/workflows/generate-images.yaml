@@ -13,7 +13,9 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - run: bun install
         working-directory: "./generator"
-      - run: bun run build --output ../../../
+      - run: bun run build
+        working-directory: "./generator"
+      - run: bun run generate --output ../../../
         working-directory: "./generator"
       - uses: stefanzweifel/git-auto-commit-action@v7
         with:

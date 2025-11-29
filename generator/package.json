@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "bun run --filter=\"*\" dev",
-    "build": "bun run --filter=\"*\" build"
+    "build": "bun run --filter=\"*\" build",
+    "generate": "bun run --filter=\"*\" generate"
   },
   "workspaces": {
     "packages": [
