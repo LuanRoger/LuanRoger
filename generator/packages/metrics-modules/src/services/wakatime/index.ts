@@ -5,7 +5,7 @@ export async function getWakatimeStats() {
   const wakatimeKey = process.env.WAKATIME_API_KEY;
   if (!wakatimeKey) {
     throw new Error(
-      "GITHUB_METRIC_PAT is not defined in environment variables",
+      "GH_METRIC_PAT is not defined in environment variables",
     );
   }
 
