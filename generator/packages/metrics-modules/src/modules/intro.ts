@@ -11,8 +11,8 @@ export class IntroModule extends Module {
       {
         name: "Intro",
         description: "A module to introduce my GitHub profile.",
-        width: 800,
-        height: 300,
+        width: 450,
+        height: 200,
       },
       debug,
     );
