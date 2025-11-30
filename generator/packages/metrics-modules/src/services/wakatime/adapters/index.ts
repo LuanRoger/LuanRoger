@@ -14,6 +14,15 @@ export function adaptWakatimeResponseToWakatimeStats(
   }
   const data = model.data;
 
+  const categories = data.categories.map((category: any) => ({
+    totalSeconds: category.total_seconds,
+    name: category.name,
+    percent: category.percent,
+    text: category.text,
+    hours: category.hours,
+    minutes: category.minutes,
+  }));
+
   const editors: WakatimeEditor[] = data.editors.map((editor: any) => ({
     totalSeconds: editor.total_seconds,
     name: editor.name,
@@ -44,6 +53,7 @@ export function adaptWakatimeResponseToWakatimeStats(
     totalText: data.human_readable_total_including_other_language,
     avarengeText: data.human_readable_daily_average_including_other_language,
     totalInSeconds: data.total_seconds,
+    categories,
     editors,
     languages,
   };
