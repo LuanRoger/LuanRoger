@@ -3,9 +3,9 @@ import { adaptWakatimeAllTimeResponseToWakatimeAllTime, adaptWakatimeResponseToW
 export async function getWakatimeStats() {
   const wakatimeUrl = process.env.WAKATIME_URL;
   const wakatimeKey = process.env.WAKATIME_API_KEY;
-  if (!wakatimeKey) {
+  if (!wakatimeKey || !wakatimeUrl) {
     throw new Error(
-      "GH_METRIC_PAT is not defined in environment variables",
+      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
     );
   }
 
@@ -31,8 +31,10 @@ export async function getWakatimeStats() {
 export async function getWakatimeLanguages() {
   const wakatimeUrl = process.env.WAKATIME_URL;
   const wakatimeKey = process.env.WAKATIME_API_KEY;
-  if (!wakatimeUrl || !wakatimeKey) {
-    return;
+  if (!wakatimeKey || !wakatimeUrl) {
+    throw new Error(
+      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
+    );
   }
 
   const response = await fetch(`${wakatimeUrl}/program_languages`, {
@@ -52,8 +54,10 @@ export async function getWakatimeLanguages() {
 export async function getWakatimeAllTimeMetrics() {
   const wakatimeUrl = process.env.WAKATIME_URL;
   const wakatimeKey = process.env.WAKATIME_API_KEY;
-  if (!wakatimeUrl || !wakatimeKey) {
-    return;
+  if (!wakatimeKey || !wakatimeUrl) {
+    throw new Error(
+      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
+    );
   }
 
   const response = await fetch(
