@@ -14,6 +14,10 @@ import {
   pulseIcon,
 } from "../icons";
 import IconLabel from "../contents/icon-label";
+import {
+  wakatimeCategoriesChart,
+  wakatimeLanguagesChart,
+} from "@/contents/wakatime-languages-chart";
 
 export class WakatimeModule extends Module {
   constructor(debug: boolean = false) {
@@ -21,8 +25,8 @@ export class WakatimeModule extends Module {
       {
         name: "Waktime",
         description: "A module to show Wakatime statistics.",
-        width: 800,
-        height: 300,
+        width: 600,
+        height: 350,
       },
       debug,
     );
@@ -35,11 +39,11 @@ export class WakatimeModule extends Module {
       return [ErrorText()];
     }
 
-    const { editors, avarengeText, languages } = stats;
+    const { editors, avarengeText, languages, categories } = stats;
     const { totalSeconds } = allTimeStats;
 
     const mostUsedEditor = editors.sort((a, b) => a.percent - b.percent).pop();
-    const mostUsedLanguage = languages
+    const mostUsedLanguage = Array.from(languages)
       .sort((a, b) => a.percent - b.percent)
       .pop();
     const allTimeCodingHours = Math.floor(totalSeconds / 3600);
@@ -80,6 +84,17 @@ export class WakatimeModule extends Module {
               gridTemplateColumns: "repeat(2, 1fr)",
               gap: 20,
             },
+          }),
+          container({
+            style: {
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: 20,
+            },
+            children: [
+              wakatimeLanguagesChart(languages),
+              wakatimeCategoriesChart(categories),
+            ],
           }),
         ],
       }),
