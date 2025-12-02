@@ -2,7 +2,7 @@ name: Generate Images
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   generate-images:
@@ -28,4 +28,5 @@ jobs:
           commit_message: "chore: regenerate images"
           commit_user_name: "github-actions[bot]"
           commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
           branch: "main"
