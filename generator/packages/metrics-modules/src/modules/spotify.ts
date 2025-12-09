@@ -13,7 +13,7 @@ export class SpotifyModule extends Module {
         name: "Spotify",
         description: "Show recently played songs from Spotify.",
         width: 600,
-        height: 350,
+        height: 360,
       },
       debug,
     );
@@ -25,6 +25,9 @@ export class SpotifyModule extends Module {
     if (tracks === undefined) {
       return [ErrorText()];
     }
+
+    const tracksItemsPromises = tracks.map((track) => spotifyTrackItem(track));
+    const tracksItems = await Promise.all(tracksItemsPromises);
 
     return [
       container({
@@ -45,7 +48,14 @@ export class SpotifyModule extends Module {
               text("Spotify recently played", h3),
             ],
           }),
-          ...tracks.map((track) => spotifyTrackItem(track)),
+          container({
+            style: {
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 15,
+            },
+            children: tracksItems,
+          }),
         ],
       }),
     ];

@@ -26,7 +26,7 @@ export async function getSpotifyRecentlyPlayed() {
   const timestamp = Date.now() - 5 * 60 * 60 * 1000;
 
   const result = await fetch(
-    `https://api.spotify.com/v1/me/player/recently-played?after=${timestamp}&total=5`,
+    `https://api.spotify.com/v1/me/player/recently-played?after=${timestamp}`,
     {
       headers: {
         Authorization: `Bearer ${accessToken.accessToken}`,
