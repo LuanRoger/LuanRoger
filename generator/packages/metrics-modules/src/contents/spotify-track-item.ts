@@ -1,8 +1,9 @@
-import { container, image, text } from "@takumi-rs/helpers";
+import { container, text } from "@takumi-rs/helpers";
 import type { SpotifyTrackInfo } from "../services/spotify/interfaces";
 import { p, small } from "../styles";
+import { image } from "./image";
 
-export function spotifyTrackItem(item: SpotifyTrackInfo) {
+export async function spotifyTrackItem(item: SpotifyTrackInfo) {
   const { name, image: imageInfo, artists } = item;
   const { url, height, width } = imageInfo;
 
@@ -22,10 +23,15 @@ export function spotifyTrackItem(item: SpotifyTrackInfo) {
           gap: 15,
         },
         children: [
-          image({
+          await image({
             src: url,
             width,
             height,
+            style: {
+              width: "55px",
+              height: "55px",
+              borderRadius: "8px",
+            },
           }),
           container({
             style: {
