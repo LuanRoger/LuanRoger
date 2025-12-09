@@ -1,4 +1,4 @@
-import { IntroModule, Module, WakatimeModule } from "metrics-modules/modules";
+import { IntroModule, Module, SpotifyModule, WakatimeModule } from "metrics-modules/modules";
 
 export interface ModuleGenerationData {
   fileName: string;
@@ -17,4 +17,9 @@ export const modules: ModuleGenerationData[] = [
     fileExtension: "png",
     module: new WakatimeModule(),
   },
+  {
+    fileName: "spotify",
+    fileExtension: "png",
+    module: new SpotifyModule()
+  }
 ];

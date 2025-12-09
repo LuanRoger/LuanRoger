@@ -1,10 +1,7 @@
 import { container, text } from "@takumi-rs/helpers";
 import { Module } from ".";
 import { h3, p } from "@/styles";
-import {
-  getWakatimeAllTimeMetrics,
-  getWakatimeStats,
-} from "../services/wakatime";
+import { getWakatimeAllTimeMetrics, getWakatimeStats } from "../services";
 import ErrorText from "@/contents/error";
 import {
   wakatimeIcon,

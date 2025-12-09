@@ -34,7 +34,7 @@ export default function ModuleRenderItem({
         <Image
           width={width}
           height={height}
-          src={`data:image/png;base64,${base64Image}`}
+          src={`data:image/webp;base64,${base64Image}`}
           alt="module preview"
         />
       </CardContent>

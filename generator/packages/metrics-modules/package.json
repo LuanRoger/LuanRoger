@@ -9,12 +9,12 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
     "./modules": {
-      "import": "./dist/modules/index.js",
+      "import": "./dist/modules/index.mjs",
       "types": "./dist/modules/index.d.ts",
       "default": "./dist/modules/index.js"
     }
@@ -22,15 +22,15 @@
   "dependencies": {
     "@takumi-rs/core": "catalog:",
     "@takumi-rs/helpers": "catalog:",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "ky": "^1.13.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "ky": "^1.14.1",
     "react": "catalog:",
     "react-dom": "catalog:",
     "typescript": "catalog:"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "tsdown": "^0.15.10"
+    "tsdown": "^0.17.2"
   }
 }
