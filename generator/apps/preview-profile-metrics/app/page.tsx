@@ -15,12 +15,13 @@ export default async function Home({
     <div className="flex flex-col gap-2">
       {renderResult.map((result, index) => {
         const { buffer, metadata } = result;
+        const base64Image = buffer.toString("base64")
 
         return (
           <ModuleRenderItem
             key={index}
             moduleMetadata={metadata}
-            base64Image={buffer.toString("base64")}
+            base64Image={base64Image}
           />
         );
       })}
