@@ -7,3 +7,4 @@ export * from "./wakatime";
 export * from "./history";
 export * from "./terminal";
 export * from "./pulse";
+export * from "./spotify";
