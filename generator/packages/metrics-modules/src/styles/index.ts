@@ -33,6 +33,10 @@ export const p: PartialStyle = {
   fontSize: 16,
   color: "#666666",
 };
+export const small: PartialStyle = {
+  fontSize: 12,
+  color: "#666666",
+};
 
 export const errorForeground: PartialStyle = {
   color: "#FF0000",
