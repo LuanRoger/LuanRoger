@@ -26,7 +26,10 @@ export class SpotifyModule extends Module {
       return [ErrorText()];
     }
 
-    const tracksItemsPromises = tracks.map((track) => spotifyTrackItem(track));
+    const last8Tracks = tracks.slice(0, 8);
+    const tracksItemsPromises = last8Tracks.map((track) =>
+      spotifyTrackItem(track),
+    );
     const tracksItems = await Promise.all(tracksItemsPromises);
 
     return [
