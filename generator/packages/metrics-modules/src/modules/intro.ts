@@ -1,9 +1,10 @@
-import { container, image, text } from "@takumi-rs/helpers";
+import { container, text } from "@takumi-rs/helpers";
 import { Module } from "./base";
 import { h1, p } from "@/styles";
 import { getGitHubProfile, getGitHubRepos } from "../services";
 import { usersIcon, repositoryIcon, codeIcon, starIcon } from "../icons";
 import IconLabel from "../contents/icon-label";
+import { image } from "../contents/image";
 
 export class IntroModule extends Module {
   constructor(debug: boolean = false) {
@@ -40,8 +41,8 @@ export class IntroModule extends Module {
         children: [
           container({
             children: [
-              image({
-                src: "github-profile.jpg",
+              await image({
+                src: "https://avatars.githubusercontent.com/u/46284513",
                 height: 200,
                 width: 200,
                 style: {
