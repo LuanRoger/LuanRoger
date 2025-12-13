@@ -7,17 +7,17 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@radix-ui/react-separator": "^1.1.7",
-    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.556.0",
+    "lucide-react": "^0.561.0",
     "metrics-modules": "workspace:*",
-    "next": "16.0.8",
+    "next": "16.0.10",
     "react": "catalog:",
     "react-dom": "catalog:",
     "@takumi-rs/core": "catalog:",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
