@@ -1,4 +1,4 @@
-import { IntroModule, Module, SpotifyModule, WakatimeModule } from "metrics-modules/modules";
+import { IntroModule, Module, RetroAchievementsModule, SpotifyModule, WakatimeModule } from "metrics-modules/modules";
 
 export interface ModuleGenerationData {
   fileName: string;
@@ -21,5 +21,10 @@ export const modules: ModuleGenerationData[] = [
     fileName: "spotify",
     fileExtension: "png",
     module: new SpotifyModule()
+  }
+  {
+    fileName: "retroachievements",
+    fileExtension: "png",
+    module: new RetroAchievementsModule(false),
   }
 ];
