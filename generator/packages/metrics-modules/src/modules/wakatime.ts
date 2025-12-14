@@ -10,7 +10,7 @@ import {
   terminalIcon,
   pulseIcon,
 } from "../icons";
-import IconLabel from "../contents/icon-label";
+import iconLabel from "../contents/icon-label";
 import {
   wakatimeCategoriesChart,
   wakatimeLanguagesChart,
@@ -53,28 +53,28 @@ export class WakatimeModule extends Module {
           gap: 20,
         },
         children: [
-          IconLabel(
-            await wakatimeIcon(),
-            text("Wakatime (over last week)", h3),
-          ),
+          iconLabel({
+            icon: await wakatimeIcon(),
+            label: text("Wakatime (over last week)", h3),
+          }),
           container({
             children: [
-              IconLabel(
-                await historyIcon(),
-                text(`~${allTimeCodingHours} coding hours recorded`, p),
-              ),
-              IconLabel(
-                await terminalIcon(),
-                text(`Coding with ${mostUsedEditor?.name}`, p),
-              ),
-              IconLabel(
-                await pulseIcon(),
-                text(`~${avarengeText} of coding per day`, p),
-              ),
-              IconLabel(
-                await codeIcon(),
-                text(`Mostly coding in ${mostUsedLanguage?.name}`, p),
-              ),
+              iconLabel({
+                icon: await historyIcon(),
+                label: text(`~${allTimeCodingHours} coding hours recorded`, p),
+              }),
+              iconLabel({
+                icon: await terminalIcon(),
+                label: text(`Coding with ${mostUsedEditor?.name}`, p),
+              }),
+              iconLabel({
+                icon: await pulseIcon(),
+                label: text(`~${avarengeText} of coding per day`, p),
+              }),
+              iconLabel({
+                icon: await codeIcon(),
+                label: text(`Mostly coding in ${mostUsedLanguage?.name}`, p),
+              }),
             ],
             style: {
               display: "grid",

@@ -29,6 +29,12 @@ export const h3: PartialStyle = {
   color: "#0366d6",
 };
 
+export const h4: PartialStyle = {
+  fontSize: 20,
+  fontWeight: "bold",
+  color: "#0366d6",
+};
+
 export const p: PartialStyle = {
   fontSize: 16,
   color: "#666666",
@@ -37,7 +43,13 @@ export const small: PartialStyle = {
   fontSize: 12,
   color: "#666666",
 };
+export const bold: PartialStyle = {
+  fontWeight: "bold",
+};
 
+export const highlightForeground: PartialStyle = {
+  color: "#0366d6",
+};
 export const errorForeground: PartialStyle = {
   color: "#FF0000",
 };
