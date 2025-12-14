@@ -4,7 +4,7 @@ import {
   getLastPlayedGame,
 } from "../services/retroachievements";
 import { Module } from ".";
-import IconLabel from "../contents/icon-label";
+import iconLabel from "../contents/icon-label";
 import { h3, h4, p } from "../styles";
 import { retroachievementsIcon } from "../icons/retroachievements";
 import { image } from "../contents/image";
@@ -49,12 +49,12 @@ export class RetroAchievementsModule extends Module {
           gap: 20,
         },
         children: [
-          IconLabel(
-            await retroachievementsIcon(),
-            text("RetroAchievements", h3),
-          ),
-          IconLabel(
-            await image({
+          iconLabel({
+            icon: await retroachievementsIcon(),
+            label: text("RetroAchievements", h3),
+          }),
+          iconLabel({
+            icon: await image({
               src: imageIcon,
               style: {
                 width: "64px",
@@ -62,7 +62,7 @@ export class RetroAchievementsModule extends Module {
                 borderRadius: "8px",
               },
             }),
-            container({
+            label: container({
               style: {
                 display: "flex",
                 flexDirection: "column",
@@ -71,31 +71,31 @@ export class RetroAchievementsModule extends Module {
               children: [
                 text(gameTitle, h4),
                 text(consoleName, p),
-                IconLabel(
-                  await trophyIcon({
+                iconLabel({
+                  icon: await trophyIcon({
                     width: "18px",
                     height: "18px",
                   }),
-                  text(
+                  label: text(
                     `${numAwardedToUser}/${numAchievementsTotal} achievements unlocked`,
                     p,
                   ),
-                ),
-                IconLabel(
-                  await goalIcon({
+                }),
+                iconLabel({
+                  icon: await goalIcon({
                     width: "18px",
                     height: "18px",
                   }),
-                  text(`${userCompletion}% completion`, p),
-                ),
+                  label: text(`${userCompletion}% completion`, p),
+                }),
               ],
             }),
-            {
+            style: {
               display: "flex",
               flexDirection: "row",
               gap: 8,
             },
-          ),
+          }),
           await retroachievementsAchievementsList(last4Achievements),
         ],
       }),

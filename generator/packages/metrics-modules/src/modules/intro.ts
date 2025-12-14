@@ -3,7 +3,7 @@ import { Module } from "./base";
 import { h1, p } from "@/styles";
 import { getGitHubProfile, getGitHubRepos } from "../services";
 import { usersIcon, repositoryIcon, codeIcon, starIcon } from "../icons";
-import IconLabel from "../contents/icon-label";
+import iconLabel from "../contents/icon-label";
 import { image } from "../contents/image";
 
 export class IntroModule extends Module {
@@ -74,13 +74,22 @@ export class IntroModule extends Module {
           }),
           container({
             children: [
-              IconLabel(
-                await repositoryIcon(),
-                text(`${public_repos} Repositories`, p),
-              ),
-              IconLabel(await codeIcon(), text(`${public_gists} Gists`, p)),
-              IconLabel(await usersIcon(), text(`${followers} Followers`, p)),
-              IconLabel(await starIcon(), text(`${stargazersCount} Stars`, p)),
+              iconLabel({
+                icon: await repositoryIcon(),
+                label: text(`${public_repos} Repositories`, p),
+              }),
+              iconLabel({
+                icon: await codeIcon(),
+                label: text(`${public_gists} Gists`, p),
+              }),
+              iconLabel({
+                icon: await usersIcon(),
+                label: text(`${followers} Followers`, p),
+              }),
+              iconLabel({
+                icon: await starIcon(),
+                label: text(`${stargazersCount} Stars`, p),
+              }),
             ],
             style: {
               display: "grid",
