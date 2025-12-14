@@ -24,6 +24,7 @@ export interface RetroachievementsAchievement {
   points: number;
   badgeName: string;
   badgeImageUrl: string;
+  dateEarned?: Date;
 }
 
 export interface RetroachievementsGameProgress {
@@ -32,7 +33,5 @@ export interface RetroachievementsGameProgress {
   userCompletion: string;
   numAchievementsTotal: number;
   numAwardedToUser: number;
-  achievements: {
-    [key: string]: RetroachievementsAchievement;
-  };
+  achievements: RetroachievementsAchievement[];
 }

@@ -34,31 +34,38 @@ export function adaptGameProgressResponseToGameProgress(
   response: any,
   retroachievementsMediaUrl: string,
 ): RetroachievementsGameProgress {
-  const flatAchievements = Object.entries(response.Achievements).reduce(
-    (
-      acc: { [key: string]: RetroachievementsAchievement },
-      [key, value]: [string, any],
-    ) => {
-      acc[key] = {
-        id: value.ID,
-        title: value.Title,
-        description: value.Description,
-        points: value.Points,
-        badgeName: value.BadgeName,
-        badgeImageUrl: `${retroachievementsMediaUrl}/Badge/${value.ID}.png`,
-      };
+  const flatAchievements = Object.entries(response.Achievements)
+    .filter(([key, value]: [string, any]) => !!value.DateEarned)
+    .reduce(
+      (
+        acc: { [key: string]: RetroachievementsAchievement },
+        [key, value]: [string, any],
+      ) => {
+        acc[key] = {
+          id: value.ID,
+          title: value.Title,
+          description: value.Description,
+          points: value.Points,
+          badgeName: value.BadgeName,
+          badgeImageUrl: `${retroachievementsMediaUrl}/Badge/${value.BadgeName}.png`,
+          dateEarned: new Date(value.DateEarned + " UTC"),
+        };
 
-      return acc;
-    },
-    {} as { [key: string]: RetroachievementsAchievement },
+        return acc;
+      },
+      {} as { [key: string]: RetroachievementsAchievement },
+    );
+
+  const sortedAchievementsKeys = Object.values(flatAchievements).sort(
+    (a, b) => (b.dateEarned?.getTime() ?? 0) - (a.dateEarned?.getTime() ?? 0),
   );
 
   return {
     id: response.ID,
     title: response.Title,
     userCompletion: response.UserCompletion,
-    numAchievementsTotal: response.NumAchievementsTotal,
+    numAchievementsTotal: response.NumAchievements,
     numAwardedToUser: response.NumAwardedToUser,
-    achievements: flatAchievements,
+    achievements: sortedAchievementsKeys,
   };
 }
