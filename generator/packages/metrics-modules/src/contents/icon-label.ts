@@ -1,8 +1,13 @@
 import { container, type Node } from "@takumi-rs/helpers";
+import type { CSSProperties } from "react";
 
-export default function IconLabel(icon: Node, label: Node) {
+export default function IconLabel(
+  icon: Node,
+  label: Node,
+  style?: CSSProperties,
+) {
   return container({
-    style: {
+    style: style ?? {
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
