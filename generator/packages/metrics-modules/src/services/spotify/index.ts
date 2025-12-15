@@ -23,7 +23,7 @@ async function getSpotifyAccessToken() {
 
 export async function getSpotifyRecentlyPlayed() {
   const accessToken = await getSpotifyAccessToken();
-  const timestamp = Date.now() - 5 * 60 * 60 * 1000;
+  const timestamp = Date.now() - 10 * 60 * 60 * 1000;
 
   const result = await fetch(
     `https://api.spotify.com/v1/me/player/recently-played?after=${timestamp}`,
