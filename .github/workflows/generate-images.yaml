@@ -26,7 +26,7 @@ jobs:
       WAKATIME_URL: ${{ secrets.WAKATIME_URL }}
       WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: oven-sh/setup-bun@v2
       - run: bun install
         working-directory: "./generator"
