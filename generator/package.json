@@ -2,7 +2,7 @@
   "name": "generator",
   "version": "1.0.0",
   "scripts": {
-    "dev": "bun run --filter=\"*\" dev",
+    "dev": "bun run --filter=\"*\" --parallel dev",
     "build": "bun run --filter=\"*\" build",
     "generate": "bun run --filter=\"*\" generate"
   },
@@ -12,11 +12,13 @@
       "packages/*"
     ],
     "catalog": {
-      "@takumi-rs/helpers": "^0.62.7",
-      "@takumi-rs/core": "^0.62.7",
+      "@takumi-rs/helpers": "0.66.14",
+      "@takumi-rs/core": "0.66.14",
       "typescript": "^5.9.3",
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
+      "react": "^19.2.4",
+      "react-dom": "^19.2.4",
+      "@types/react": "^19.2.14",
+      "@types/react-dom": "^19.2.3"
     }
   }
 }

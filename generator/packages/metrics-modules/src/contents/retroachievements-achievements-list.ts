@@ -9,7 +9,6 @@ export async function retroachievementsAchievementsList(
   const achievementsListItemsPromises = achievements.map(
     async (achievement) => {
       const { title, description, badgeImageUrl } = achievement;
-      console.log(achievement);
 
       return container({
         style: {
