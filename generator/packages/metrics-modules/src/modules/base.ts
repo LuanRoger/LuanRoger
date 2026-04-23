@@ -1,4 +1,4 @@
-import { container, type Node } from "@takumi-rs/helpers";
+import { container, type Node } from "takumi-js/helpers";
 import { debugContainer } from "@/styles";
 
 export interface ModuleMetadata {

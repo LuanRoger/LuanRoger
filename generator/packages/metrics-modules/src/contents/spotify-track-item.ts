@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import type { SpotifyTrackInfo } from "../services/spotify/interfaces";
 import { p, small } from "../styles";
 import { image } from "./image";

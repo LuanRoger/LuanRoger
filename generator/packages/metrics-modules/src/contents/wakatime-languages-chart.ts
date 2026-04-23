@@ -1,4 +1,4 @@
-import { container, text, type Node } from "@takumi-rs/helpers";
+import { container, text, type Node } from "takumi-js/helpers";
 import type { WakatimeLanguages } from "../services/wakatime/interfaces";
 import { h3, p } from "@/styles";
 

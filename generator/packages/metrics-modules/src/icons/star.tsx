@@ -1,6 +1,6 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 
-export function starIcon() {
+export async function starIcon() {
   const component = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,5 +18,5 @@ export function starIcon() {
     </svg>
   );
 
-  return fromJsx(component);
+  return (await fromJsx(component)).node;
 }

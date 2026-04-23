@@ -1,7 +1,7 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 import type { SVGProps } from "react";
 
-export function goalIcon(props: SVGProps<SVGSVGElement>) {
+export async function goalIcon(props?: SVGProps<SVGSVGElement>) {
   const component = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,5 +15,5 @@ export function goalIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 
-  return fromJsx(component);
+  return (await fromJsx(component)).node;
 }

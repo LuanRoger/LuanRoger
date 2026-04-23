@@ -1,4 +1,4 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 import type { CSSProperties } from "react";
 
 async function fetchImageAsBase64(url: string): Promise<string> {
@@ -26,5 +26,5 @@ export async function image({ src, ...props }: ImageProps) {
   const imageSrc = isExternalUrl(src) ? await fetchImageAsBase64(src) : src;
   const imageElement = <img src={imageSrc} {...props} />;
 
-  return fromJsx(imageElement);
+  return (await fromJsx(imageElement)).node;
 }

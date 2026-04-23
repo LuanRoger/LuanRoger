@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import { Module } from "./base";
 import { h1, p } from "@/styles";
 import { getGitHubProfile, getGitHubRepos } from "../services";
@@ -13,7 +13,7 @@ export class IntroModule extends Module {
         name: "Intro",
         description: "A module to introduce my GitHub profile.",
         width: 450,
-        height: 200,
+        height: 310,
       },
       debug,
     );

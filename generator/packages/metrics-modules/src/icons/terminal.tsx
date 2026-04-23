@@ -1,6 +1,6 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 
-export function terminalIcon() {
+export async function terminalIcon() {
   const component = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,5 +15,5 @@ export function terminalIcon() {
     </svg>
   );
 
-  return fromJsx(component);
+  return (await fromJsx(component)).node;
 }

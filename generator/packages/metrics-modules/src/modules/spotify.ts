@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import { getSpotifyRecentlyPlayed } from "../services/spotify";
 import ErrorText from "../contents/error";
 import { Module } from "./base";
