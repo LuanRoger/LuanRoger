@@ -2,7 +2,7 @@ import ky from "ky";
 import type { GitHubProfile, GitHubRepository } from "./interfaces";
 
 const githubApiClient = ky.create({
-  prefixUrl: "https://api.github.com",
+  prefix: "https://api.github.com",
   headers: {
     Accept: "application/vnd.github+json",
   },

@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import { Module } from ".";
 import { h3, p } from "@/styles";
 import { getWakatimeAllTimeMetrics, getWakatimeStats } from "../services";

@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import type { RetroachievementsAchievement } from "../services/retroachievements/interfaces";
 import { image } from "./image";
 import { bold, highlightForeground, p } from "../styles";

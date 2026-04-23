@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import { Module } from "./base";
 import { h2, p } from "@/styles";
 

@@ -2,16 +2,16 @@
 
 import { initModules } from "@/modules";
 import { RenderResult } from "@/types/render-result";
-import { renderer } from "metrics-modules";
+import { render } from "metrics-modules";
 
 export async function renderModules(
-  debug: boolean = false
+  debug: boolean = false,
 ): Promise<RenderResult[]> {
   const modules = initModules(debug);
   const bufferPromises = modules.map(async (module) => {
     const node = await module.generate();
 
-    const buffer = await renderer.render(node, {
+    const buffer = await render(node, {
       ...module.sizeObject(),
       format: "webp",
     });

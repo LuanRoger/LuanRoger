@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import { errorForeground, p } from "@/styles";
 
 interface ErrorTextProps {

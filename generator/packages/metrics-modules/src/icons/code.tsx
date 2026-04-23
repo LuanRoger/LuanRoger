@@ -1,6 +1,6 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 
-export function codeIcon() {
+export async function codeIcon() {
   const component = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,5 +14,5 @@ export function codeIcon() {
     </svg>
   );
 
-  return fromJsx(component);
+  return (await fromJsx(component)).node;
 }

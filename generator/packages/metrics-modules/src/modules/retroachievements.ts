@@ -1,4 +1,4 @@
-import { container, text } from "@takumi-rs/helpers";
+import { container, text } from "takumi-js/helpers";
 import {
   getGameProgress,
   getLastPlayedGame,
@@ -13,12 +13,12 @@ import { goalIcon } from "../icons/goal";
 import { retroachievementsAchievementsList } from "../contents/retroachievements-achievements-list";
 
 export class RetroAchievementsModule extends Module {
-  constructor(debug: boolean) {
+  constructor(debug: boolean = false) {
     super(
       {
         name: "RetroAchievements",
         description: "Show RetroAchievements stats.",
-        width: 600,
+        width: 800,
         height: 460,
       },
       debug,
@@ -72,20 +72,14 @@ export class RetroAchievementsModule extends Module {
                 text(gameTitle, h4),
                 text(consoleName, p),
                 iconLabel({
-                  icon: await trophyIcon({
-                    width: "18px",
-                    height: "18px",
-                  }),
+                  icon: await trophyIcon(),
                   label: text(
                     `${numAwardedToUser}/${numAchievementsTotal} achievements unlocked`,
                     p,
                   ),
                 }),
                 iconLabel({
-                  icon: await goalIcon({
-                    width: "18px",
-                    height: "18px",
-                  }),
+                  icon: await goalIcon(),
                   label: text(`${userCompletion}% completion`, p),
                 }),
               ],

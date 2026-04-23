@@ -31,6 +31,6 @@ export const modules: ModuleGenerationData[] = [
   {
     fileName: "retroachievements",
     fileExtension: "png",
-    module: new RetroAchievementsModule(false),
+    module: new RetroAchievementsModule(),
   },
 ];

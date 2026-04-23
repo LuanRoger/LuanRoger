@@ -1,6 +1,6 @@
-import { fromJsx } from "@takumi-rs/helpers/jsx";
+import { fromJsx } from "takumi-js/helpers/jsx";
 
-export function calendarIcon() {
+export async function calendarIcon() {
   const component = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -23,5 +23,5 @@ export function calendarIcon() {
     </svg>
   );
 
-  return fromJsx(component);
+  return (await fromJsx(component)).node;
 }
