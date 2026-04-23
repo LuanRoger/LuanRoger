@@ -1,4 +1,4 @@
-import { renderer } from "metrics-modules";
+import { render as moduleRender } from "metrics-modules";
 import { modules } from "./modules";
 import { createFilePath, writeImageToFile } from "./utils/file";
 
@@ -9,7 +9,7 @@ export async function render(basePath?: string) {
     const { module: moduleInstance, fileExtension, fileName } = module;
 
     const node = await moduleInstance.generate();
-    const buffer = await renderer.render(node, {
+    const buffer = await moduleRender(node, {
       width: moduleInstance.width,
       height: moduleInstance.height,
       format: "png",
@@ -17,7 +17,7 @@ export async function render(basePath?: string) {
     const fullFileName = createFilePath(
       outputBasePath,
       fileName,
-      fileExtension
+      fileExtension,
     );
 
     await writeImageToFile(buffer, fullFileName);
