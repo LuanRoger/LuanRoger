@@ -4,9 +4,11 @@ import { initModules } from "@/modules";
 import { RenderResult } from "@/types/render-result";
 import { render } from "metrics-modules";
 
-export async function renderModules(
-  debug: boolean = false,
-): Promise<RenderResult[]> {
+export async function renderModules(debug: boolean = false): Promise<{
+  results: RenderResult[];
+  timeMs: number;
+}> {
+  const startTime = performance.now();
   const modules = initModules(debug);
   const bufferPromises = modules.map(async (module) => {
     const node = await module.generate();
@@ -23,5 +25,9 @@ export async function renderModules(
   });
 
   const results = await Promise.all(bufferPromises);
-  return results;
+  const endTime = performance.now();
+
+  const timeMs = endTime - startTime;
+  
+  return { results, timeMs };
 }
