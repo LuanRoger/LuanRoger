@@ -1,7 +1,7 @@
 import { container, text } from "takumi-js/helpers";
 import { Module } from "./base";
 import { h1, p } from "@/styles";
-import { getGitHubProfile, getGitHubRepos } from "../services";
+import { getGitHubProfile, getGitHubRepos } from "../services/github";
 import { usersIcon, repositoryIcon, codeIcon, starIcon } from "../icons";
 import iconLabel from "../contents/icon-label";
 import { image } from "../contents/image";
