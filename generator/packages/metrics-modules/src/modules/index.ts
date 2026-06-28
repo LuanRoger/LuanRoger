@@ -4,3 +4,4 @@ export * from "./base";
 export * from "./wakatime";
 export * from "./spotify";
 export * from "./retroachievements";
+export * from "./steam";
