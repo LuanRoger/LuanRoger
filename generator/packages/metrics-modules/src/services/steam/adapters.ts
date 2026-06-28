@@ -1,4 +1,8 @@
-import type { SteamGamesResponse } from "./interfaces";
+import type {
+  SteamGamesResponse,
+  SteamPlayerStatsResponse,
+  SteamGameSchemaResponse,
+} from "./interfaces";
 
 export function adaptOwnedGamesResponseToSteamGamesResponse(
   response: any,
@@ -21,5 +25,56 @@ export function adaptOwnedGamesResponseToSteamGamesResponse(
       contentDescriptorIds: game.content_descriptorids,
       playtimeDisconnected: game.playtime_disconnected,
     })),
+  };
+}
+
+export function adaptPlayerStatsResponseToSteamPlayerStatsResponse(
+  response: any,
+): SteamPlayerStatsResponse {
+  const innerResponse = response.playerstats;
+
+  return {
+    playerstats: {
+      steamID: innerResponse.steamID,
+      gameName: innerResponse.gameName,
+      achievements: innerResponse.achievements.map((achievement: any) => ({
+        apiname: achievement.apiname,
+        achieved: achievement.achieved,
+        unlocktime: achievement.unlocktime,
+        name: achievement.name,
+        description: achievement.description,
+      })),
+    },
+  };
+}
+
+export function adaptGameSchemaResponseToSteamGameSchemaResponse(
+  response: any,
+): SteamGameSchemaResponse {
+  const innerResponse = response.game;
+
+  return {
+    game: {
+      gameName: innerResponse.gameName,
+      gameVersion: innerResponse.gameVersion,
+      availableGameStats: {
+        stats: innerResponse.availableGameStats.stats.map((stat: any) => ({
+          name: stat.name,
+          defaultvalue: stat.defaultvalue,
+          displayName: stat.displayName,
+        })),
+        achievements: innerResponse.availableGameStats.achievements.map(
+          (achievement: any) => ({
+            name: achievement.name,
+            defaultvalue: achievement.defaultvalue,
+            displayName: achievement.displayName,
+            hidden: achievement.hidden,
+            description: achievement.description,
+            icon: achievement.icon,
+            icongray: achievement.icongray,
+          }),
+        ),
+      },
+    },
   };
 }
