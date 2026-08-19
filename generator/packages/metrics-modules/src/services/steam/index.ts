@@ -50,6 +50,7 @@ export async function getGameSchema(appId: number) {
 
   const response = await fetch(url);
   const jsonResponse = await response.json();
+  console.log(jsonResponse)
 
   return adaptGameSchemaResponseToSteamGameSchemaResponse(jsonResponse);
 }
