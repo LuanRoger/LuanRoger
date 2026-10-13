@@ -60,29 +60,7 @@ export async function getOpenIssues() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:open+author:${githubUsername}`,
-      {
-        headers: {
-          Authorization: `Bearer ${githubPat}`,
-        },
-      },
-    )
-    .json();
-
-  return response;
-}
-
-export async function getClosedIssues() {
-  const githubPat = process.env.GH_METRIC_PAT;
-  const githubUsername = process.env.GH_USERNAME;
-
-  if (!githubPat || !githubUsername) {
-    throw new Error("GH_METRIC_PAT is not defined in environment variables");
-  }
-
-  const response = await githubApiClient
-    .get<GitHubSearchResponse>(
-      `search/issues?q=is:closed+author:${githubUsername}`,
+      `search/issues?q=is:issue+is:open+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -104,7 +82,7 @@ export async function getDraftIssues() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:draft+author:${githubUsername}`,
+      `search/issues?q=is:draft+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -126,7 +104,7 @@ export async function getCloseIssues() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:closed+author:${githubUsername}`,
+      `search/issues?q=is:issue+is:closed+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -148,7 +126,7 @@ export async function getOpenPullRequests() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:pr+is:open+author:${githubUsername}`,
+      `search/issues?q=is:pr+is:open+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -170,7 +148,7 @@ export async function getMergedPullRequests() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:pr+is:merged+author:${githubUsername}`,
+      `search/issues?q=is:pr+is:merged+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -192,7 +170,7 @@ export async function getDraftPullRequests() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:pr+is:draft+author:${githubUsername}`,
+      `search/issues?q=is:pr+is:draft+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
@@ -214,7 +192,7 @@ export async function getClosedPullRequests() {
 
   const response = await githubApiClient
     .get<GitHubSearchResponse>(
-      `search/issues?q=is:pr+is:closed+author:${githubUsername}`,
+      `search/issues?q=is:pr+is:closed+author:${githubUsername}&per_page=100`,
       {
         headers: {
           Authorization: `Bearer ${githubPat}`,
