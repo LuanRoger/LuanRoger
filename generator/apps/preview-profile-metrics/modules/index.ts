@@ -6,7 +6,7 @@ import {
   SteamModule,
   SpotifyModule,
   WakatimeModule,
-  IssuesModule
+  IssuesPRsModule
 } from "metrics-modules/modules";
 
 export function initModules(debug: boolean): Module[] {
@@ -16,7 +16,7 @@ export function initModules(debug: boolean): Module[] {
     new SpotifyModule(debug),
     new RetroAchievementsModule(debug),
     new SteamModule(debug),
-    new IssuesModule(debug),
+    new IssuesPRsModule(debug),
     new DumyModule(debug),
   ];
 }

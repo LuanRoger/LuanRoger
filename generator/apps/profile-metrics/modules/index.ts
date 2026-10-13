@@ -1,6 +1,6 @@
 import {
   IntroModule,
-  IssuesModule,
+  IssuesPRsModule,
   Module,
   RetroAchievementsModule,
   SpotifyModule,
@@ -41,8 +41,8 @@ export const modules: ModuleGenerationData[] = [
     module: new SteamModule(),
   },
   {
-    fileName: "issues",
+    fileName: "issues-prs",
     fileExtension: "png",
-    module: new IssuesModule(),
+    module: new IssuesPRsModule(),
   }
 ];
