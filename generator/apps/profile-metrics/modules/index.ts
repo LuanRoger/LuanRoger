@@ -1,8 +1,10 @@
 import {
   IntroModule,
+  IssuesModule,
   Module,
   RetroAchievementsModule,
   SpotifyModule,
+  SteamModule,
   WakatimeModule,
 } from "metrics-modules/modules";
 
@@ -33,4 +35,14 @@ export const modules: ModuleGenerationData[] = [
     fileExtension: "png",
     module: new RetroAchievementsModule(),
   },
+  {
+    fileName: "steam",
+    fileExtension: "png",
+    module: new SteamModule(),
+  },
+  {
+    fileName: "issues",
+    fileExtension: "png",
+    module: new IssuesModule(),
+  }
 ];
