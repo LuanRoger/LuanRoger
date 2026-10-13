@@ -32,7 +32,7 @@ export const h3: CSSProperties = {
 export const h4: CSSProperties = {
   fontSize: 20,
   fontWeight: "bold",
-  color: "#0366d6",
+  color: "#666666",
 };
 
 export const p: CSSProperties = {

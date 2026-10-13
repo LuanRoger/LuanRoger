@@ -8,3 +8,4 @@ export * from "./history";
 export * from "./terminal";
 export * from "./pulse";
 export * from "./spotify";
+export * from "./open-issue";
