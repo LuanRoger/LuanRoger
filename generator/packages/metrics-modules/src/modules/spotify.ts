@@ -13,7 +13,7 @@ export class SpotifyModule extends Module {
         name: "Spotify",
         description: "Show recently played songs from Spotify.",
         width: 600,
-        height: 360,
+        height: 400,
       },
       debug,
     );
