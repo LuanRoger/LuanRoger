@@ -1,19 +1,20 @@
-import { adaptWakatimeAllTimeResponseToWakatimeAllTime, adaptWakatimeResponseToWakatimeStats } from "./adapters";
+import {
+  adaptWakatimeAllTimeResponseToWakatimeAllTime,
+  adaptWakatimeResponseToWakatimeStats,
+} from "./adapters";
 
 export async function getWakatimeStats() {
   const wakatimeUrl = process.env.WAKATIME_URL;
-  const wakatimeKey = process.env.WAKATIME_API_KEY;
+  const wakatimeKey = process.env.WAKATIME_OAUTH_KEY;
   if (!wakatimeKey || !wakatimeUrl) {
     throw new Error(
-      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
+      "WAKATIME_OAUTH_KEY or WAKATIME_URL is not defined in environment variables",
     );
   }
 
-  const response = await fetch(`${wakatimeUrl}/users/current/stats`, {
-    headers: {
-      Authorization: `Basic ${wakatimeKey}`,
-    },
-  });
+  const response = await fetch(
+    `${wakatimeUrl}/users/current/stats?api_key=${wakatimeKey}`,
+  );
   if (!response.ok) {
     return;
   }
@@ -30,18 +31,14 @@ export async function getWakatimeStats() {
 
 export async function getWakatimeLanguages() {
   const wakatimeUrl = process.env.WAKATIME_URL;
-  const wakatimeKey = process.env.WAKATIME_API_KEY;
+  const wakatimeKey = process.env.WAKATIME_OAUTH_KEY;
   if (!wakatimeKey || !wakatimeUrl) {
     throw new Error(
-      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
+      "WAKATIME_OAUTH_KEY or WAKATIME_URL is not defined in environment variables",
     );
   }
 
-  const response = await fetch(`${wakatimeUrl}/program_languages`, {
-    headers: {
-      Authorization: `Basic ${wakatimeKey}`,
-    },
-  });
+  const response = await fetch(`${wakatimeUrl}/program_languages?api_key=${wakatimeKey}`);
   if (!response.ok) {
     return;
   }
@@ -53,20 +50,15 @@ export async function getWakatimeLanguages() {
 
 export async function getWakatimeAllTimeMetrics() {
   const wakatimeUrl = process.env.WAKATIME_URL;
-  const wakatimeKey = process.env.WAKATIME_API_KEY;
+  const wakatimeKey = process.env.WAKATIME_OAUTH_KEY;
   if (!wakatimeKey || !wakatimeUrl) {
     throw new Error(
-      "WAKATIME_API_KEY or WAKATIME_URL is not defined in environment variables",
+      "WAKATIME_OAUTH_KEY or WAKATIME_URL is not defined in environment variables",
     );
   }
 
   const response = await fetch(
-    `${wakatimeUrl}/users/current/all_time_since_today`,
-    {
-      headers: {
-        Authorization: `Basic ${wakatimeKey}`,
-      },
-    },
+    `${wakatimeUrl}/users/current/all_time_since_today?api_key=${wakatimeKey}`,
   );
   if (!response.ok) {
     return;
